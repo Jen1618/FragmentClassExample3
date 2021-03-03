@@ -13,6 +13,8 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        //load fragment 2 into second activity
+        loadFragment(new SecondFragment(), R.id.fragContainer_second);
 
     }
 
@@ -20,7 +22,7 @@ public class SecondActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         // create a fragment transaction to begin the transaction and replace the fragment
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        //replacing the placeholder - fragmentContainterView with the fragment that is passed as parameter
+        //replacing the placeholder - fragmentContainerView with the fragment that is passed as parameter
         fragmentTransaction.replace(id, fragment);
         fragmentTransaction.commit();
     }
